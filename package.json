@@ -1,0 +1,25 @@
+{
+  "name": "job-search",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bun run bun.build.js",
+    "serve": "bun run bun.serve.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun-style-loader": "^0.4.0",
+    "flowbite": "^1.8.0",
+    "sass": "^1.97.3",
+    "tailwindcss": "^4.1.18"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6"
+  }
+}
