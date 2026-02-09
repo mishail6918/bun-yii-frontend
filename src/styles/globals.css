@@ -1,8 +1,8 @@
-@tailwind base;
-@tailwind components;
+@import 'tailwindcss/preflight';
+@import 'tailwindcss';
 @tailwind utilities;
 
-:root {
+@theme {
     --color-primary: #407dc0;
     --color-error: #f44336;
     --color-success: #4caf50;

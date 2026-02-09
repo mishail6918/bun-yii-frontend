@@ -8,7 +8,7 @@ import styleLoader from "bun-style-loader";
 
 const PATHS = {
     src: "./src",
-    dist: "./dist",
+    dist: "./web/dist",
 };
 
 const views = JSON.parse(
@@ -55,10 +55,15 @@ export async function bunBuild({ dev = false } = {}) {
     const entries = collectEntries();
     console.log(entries);
 
+    const entrypoints = [
+        "./src/js/main.js",
+        ...Object.values(entries),
+    ];
+
     await processCss();
 
     await build({
-        entrypoints: Object.values(entries),
+        entrypoints: entrypoints,
 
         outdir: PATHS.dist,
 
